@@ -12,7 +12,7 @@ spec:
       labels:
         name: peer0-org2
     spec:
-      nodeName: worker2
+   #   nodeName: worker2
       volumes:
         - name: fabricfiles
           persistentVolumeClaim:
