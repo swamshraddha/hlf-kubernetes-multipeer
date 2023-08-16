@@ -10,10 +10,10 @@ spec:
   type: ClusterIP
   ports:
     - name: grpc
-      port: 7051
+      port: 8051
       protocol: TCP
     - name: event
-      port: 7061
+      port: 8061
       protocol: TCP
     - name: couchdb
       port: 5984
@@ -32,7 +32,7 @@ spec:
   type: ClusterIP
   ports:
   - name: "peer-metrics"
-    port: 9443
-    targetPort: 9443
+    port: 10443
+    targetPort: 10443
   selector:
     name: peer1-org1
