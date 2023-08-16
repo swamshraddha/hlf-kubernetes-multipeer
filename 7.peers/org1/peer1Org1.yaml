@@ -54,21 +54,21 @@ spec:
             - name: CORE_PEER_ID
               value: peer1-org1
             - name: CORE_PEER_ADDRESS
-              value: peer1-org1:7051
+              value: peer1-org1:8051
             - name: CORE_PEER_LISTENADDRESS
-              value: 0.0.0.0:7051
+              value: 0.0.0.0:8051
             - name: CORE_PEER_EVENTS_ADDRESS
-              value: 0.0.0.0:7061
+              value: 0.0.0.0:8061
             - name: CORE_PEER_GOSSIP_BOOTSTRAP
-              value: peer1-org1:7051
+              value: peer1-org1:8051
               
             - name: CORE_PEER_GOSSIP_BOOTSTRAP
-              value: peer0-org1:7051
+              value: peer0-org1:8051
               
             - name: CORE_PEER_GOSSIP_ENDPOINT
-              value: peer1-org1:7051
+              value: peer1-org1:8051
             - name: CORE_PEER_GOSSIP_EXTERNALENDPOINT
-              value: peer1-org1:7051
+              value: peer1-org1:8051
             - name: CORE_PEER_GOSSIP_ORGLEADER
               value: "false"
             - name: CORE_PEER_GOSSIP_USELEADERELECTION
@@ -96,14 +96,14 @@ spec:
             - name: FABRIC_CFG_PATH
               value: /etc/hyperledger/fabric
             - name: CORE_OPERATIONS_LISTENADDRESS
-              value: 0.0.0.0:9443
+              value: 0.0.0.0:10443
             - name: CORE_METRICS_PROVIDER
               value: prometheus
           ports:    
-            - containerPort: 7051
-            - containerPort: 7052
-            - containerPort: 7053
-            - containerPort: 9443
+            - containerPort: 8051
+            - containerPort: 8052
+            - containerPort: 8053
+            - containerPort: 10443
           resources:
             limits:
               memory: "300Mi"
