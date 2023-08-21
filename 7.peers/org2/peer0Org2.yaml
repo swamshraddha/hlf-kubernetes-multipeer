@@ -63,8 +63,13 @@ spec:
               value: peer0-org2:7051
             - name: CORE_PEER_GOSSIP_ENDPOINT
               value: peer0-org2:7051
+              
             - name: CORE_PEER_GOSSIP_EXTERNALENDPOINT
               value: peer0-org2:7051
+            
+            - name: CORE_PEER_GOSSIP_BOOTSTRAP
+              value: peer1-org1:8051
+              
             - name: CORE_PEER_GOSSIP_ORGLEADER
               value: "false"
             - name: CORE_PEER_GOSSIP_USELEADERELECTION
