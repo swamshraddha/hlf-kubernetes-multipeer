@@ -94,7 +94,7 @@ mkdir -p "/organizations/peerOrganizations/org1.example.com/tlsca"
 cp "/organizations/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/tls/tlscacerts/"* "/organizations/peerOrganizations/org1.example.com/tlsca/tlsca.org1.example.com-cert.pem"
 
 mkdir -p "/organizations/peerOrganizations/org1.example.com/ca"
-cp "/organizations/peerOrganizations/org1.example.com/peers/peer1 .org1.example.com/msp/cacerts/"* "/organizations/peerOrganizations/org1.example.com/ca/ca.org1.example.com-cert.pem"
+cp "/organizations/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/msp/cacerts/"* "/organizations/peerOrganizations/org1.example.com/ca/ca.org1.example.com-cert.pem"
 
 # mkdir -p organizations/peerOrganizations/org1.example.com/peers/peer1.org1.example.com
 { set +x; } 2>/dev/null
