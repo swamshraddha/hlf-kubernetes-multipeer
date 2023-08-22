@@ -57,3 +57,26 @@ fabric-ca-client enroll -u https://org2admin:org2adminpw@ca-org2:8054 --caname c
 cp "/organizations/peerOrganizations/org2.example.com/msp/config.yaml" "/organizations/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/config.yaml"
 
   { set +x; } 2>/dev/null
+
+
+
+
+fabric-ca-client register --caname ca-org2 --id.name peer1 --id.secret peer1pw --id.type peer --tls.certfiles "/organizations/fabric-ca/org2/tls-cert.pem"
+fabric-ca-client enroll -u https://peer1:peer1pw@ca-org2:8054 --caname ca-org2 -M "/organizations/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/msp" --csr.hosts peer1.org2.example.com --csr.hosts  peer1-org2 --tls.certfiles "/organizations/fabric-ca/org2/tls-cert.pem"
+cp "/organizations/peerOrganizations/org2.example.com/msp/config.yaml" "/organizations/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/msp/config.yaml"
+fabric-ca-client enroll -u https://peer1:peer1pw@ca-org2:8054 --caname ca-org2 -M "/organizations/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/tls" --enrollment.profile tls --csr.hosts peer1.org2.example.com --csr.hosts  peer1-org2 --csr.hosts ca-org2 --csr.hosts localhost --tls.certfiles "/organizations/fabric-ca/org2/tls-cert.pem"
+cp "/organizations/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/tls/tlscacerts/"* "/organizations/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/tls/ca.crt"
+cp "/organizations/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/tls/signcerts/"* "/organizations/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/tls/server.crt"
+cp "/organizations/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/tls/keystore/"* "/organizations/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/tls/server.key"
+
+mkdir -p "/organizations/peerOrganizations/org2.example.com/msp/tlscacerts"
+cp "/organizations/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/tls/tlscacerts/"* "/organizations/peerOrganizations/org2.example.com/msp/tlscacerts/ca.crt"
+
+mkdir -p "/organizations/peerOrganizations/org2.example.com/tlsca"
+cp "/organizations/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/tls/tlscacerts/"* "/organizations/peerOrganizations/org2.example.com/tlsca/tlsca.org2.example.com-cert.pem"
+
+mkdir -p "/organizations/peerOrganizations/org2.example.com/ca"
+cp "/organizations/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/msp/cacerts/"* "/organizations/peerOrganizations/org2.example.com/ca/ca.org2.example.com-cert.pem"
+
+# mkdir -p organizations/peerOrganizations/org2.example.com/peers/peer1.org2.example.com
+{ set +x; } 2>/dev/null 
