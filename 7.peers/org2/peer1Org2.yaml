@@ -65,7 +65,7 @@ spec:
               value: peer1-org2:8051
             
             - name: CORE_PEER_GOSSIP_BOOTSTRAP
-              value: peer1-org2:7051
+              value: peer0-org2:7051
               
             - name: CORE_PEER_GOSSIP_EXTERNALENDPOINT
               value: peer1-org2:8051
