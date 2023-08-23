@@ -69,14 +69,14 @@ cp "/organizations/peerOrganizations/org3.example.com/peers/peer1.org3.example.c
 cp "/organizations/peerOrganizations/org3.example.com/peers/peer1.org3.example.com/tls/signcerts/"* "/organizations/peerOrganizations/org3.example.com/peers/peer1.org3.example.com/tls/server.crt"
 cp "/organizations/peerOrganizations/org3.example.com/peers/peer1.org3.example.com/tls/keystore/"* "/organizations/peerOrganizations/org3.example.com/peers/peer1.org3.example.com/tls/server.key"
 
-mkdir -p "/organizations/peerOrganizations/org3.example.com/msp/tlscacerts"
+#mkdir -p "/organizations/peerOrganizations/org3.example.com/msp/tlscacerts"
 cp "/organizations/peerOrganizations/org3.example.com/peers/peer1.org3.example.com/tls/tlscacerts/"* "/organizations/peerOrganizations/org3.example.com/msp/tlscacerts/ca.crt"
 
-mkdir -p "/organizations/peerOrganizations/org3.example.com/tlsca"
+#mkdir -p "/organizations/peerOrganizations/org3.example.com/tlsca"
 cp "/organizations/peerOrganizations/org3.example.com/peers/peer1.org3.example.com/tls/tlscacerts/"* "/organizations/peerOrganizations/org3.example.com/tlsca/tlsca.org3.example.com-cert.pem"
 
-mkdir -p "/organizations/peerOrganizations/org3.example.com/ca"
+#mkdir -p "/organizations/peerOrganizations/org3.example.com/ca"
 cp "/organizations/peerOrganizations/org3.example.com/peers/peer1.org3.example.com/msp/cacerts/"* "/organizations/peerOrganizations/org3.example.com/ca/ca.org3.example.com-cert.pem"
 
-# mkdir -p organizations/peerOrganizations/org3.example.com/peers/peer1.org3.example.com
+mkdir -p organizations/peerOrganizations/org3.example.com/peers/peer1.org3.example.com
 { set +x; } 2>/dev/null 
