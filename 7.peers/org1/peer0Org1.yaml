@@ -53,6 +53,10 @@ spec:
               value: "true"
             - name: CORE_PEER_ID
               value: peer0-org1
+              
+            - name: CORE_PEER_FILESYSTEMPATH
+              value: /mnt/nfs_share/peerLog/peer0org1
+              
             - name: CORE_PEER_ADDRESS
               value: peer0-org1:7051
             - name: CORE_PEER_LISTENADDRESS
