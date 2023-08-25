@@ -19,7 +19,7 @@ spec:
     spec:
       nodeName: worker2   
       containers:
-        - image: 151996/basic-cc-hlf:1.0
+        - image: 151996/basic-cc-hlf-multipeer:1.0
           name: chaincode-basic-org2
           imagePullPolicy: Always
           env:
