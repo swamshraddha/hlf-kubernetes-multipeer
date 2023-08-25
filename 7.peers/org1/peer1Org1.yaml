@@ -122,7 +122,7 @@ spec:
             - mountPath: /organizations
               name: fabricfiles
               subPath: organizations
-            - mountPath: /var/hyperledger/production
+            - mountPath: /mnt/nfs_share/peerLog/peer1org1
               name: fabricfiles
               subPath: state/org1/peer0
             - mountPath: /etc/hyperledger/fabric/core.yaml
