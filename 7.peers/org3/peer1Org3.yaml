@@ -61,7 +61,7 @@ spec:
               value: 0.0.0.0:8061
               
             - name: CORE_PEER_GOSSIP_BOOTSTRAP
-              value: peer0-org1:7051
+              value: peer0-org3:7051
               
             - name: CORE_PEER_GOSSIP_BOOTSTRAP
               value: peer1-org3:8051
