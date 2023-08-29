@@ -28,8 +28,8 @@ peer lifecycle chaincode checkcommitreadiness --channelID mychannel --name basic
 
 
 commit chaincode
-peer lifecycle chaincode commit -o orderer:7050 --channelID mychannel --name basic --version 1.0 --sequence 1 --init-required --tls true --cafile $ORDERER_CA --peerAddresses peer0-org1:7051 --tlsRootCertFiles /organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt --peerAddresses peer1-org1:8051 --tlsRootCertFiles /organizations/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/tls/ca.crt --peerAddresses peer0-org2:7051 --tlsRootCertFiles /organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt --peerAddresses peer1-org2:7051 --tlsRootCertFiles /organizations/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/tls/ca.crt --peerAddresses peer0-org3:7051 --tlsRootCertFiles /organizations/peerOrganizations/org3.example.com/peers/peer0.org3.example.com/tls/ca.crt
---peerAddresses peer1-org3:7051 --tlsRootCertFiles /organizations/peerOrganizations/org3.example.com/peers/peer1.org3.example.com/tls/ca.crt
+peer lifecycle chaincode commit -o orderer:7050 --channelID mychannel --name basic --version 1.0 --sequence 1 --init-required --tls true --cafile $ORDERER_CA --peerAddresses peer0-org1:7051 --tlsRootCertFiles /organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt --peerAddresses peer1-org1:8051 --tlsRootCertFiles /organizations/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/tls/ca.crt --peerAddresses peer0-org2:7051 --tlsRootCertFiles /organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt --peerAddresses peer1-org2:8051 --tlsRootCertFiles /organizations/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/tls/ca.crt --peerAddresses peer0-org3:7051 --tlsRootCertFiles /organizations/peerOrganizations/org3.example.com/peers/peer0.org3.example.com/tls/ca.crt
+--peerAddresses peer1-org3:8051 --tlsRootCertFiles /organizations/peerOrganizations/org3.example.com/peers/peer1.org3.example.com/tls/ca.crt
 
 
  InitLedger command
